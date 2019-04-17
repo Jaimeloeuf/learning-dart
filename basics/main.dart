@@ -1,5 +1,6 @@
 import 'dart:cli';
 
 main(List<String> args) {
-    print(args);
+    // print(args);
+    print('hello');
 }
