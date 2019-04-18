@@ -2,7 +2,7 @@ import 'dart:html';
 
 Iterable<String> thingsTodo() sync* {
   var actions = ['Walk', 'Wash', 'Feed'];
-  var pets = ['cats', 'dogs'];
+  List<String> pets = ['cats', 'dogs'];
 
   for (var action in actions) {
     for (var pet in pets) {
