@@ -4,11 +4,10 @@ import 'package:angular_app/src/HeroComponent/hero_component.dart';
 import 'package:angular_app/src/HeroComponent/hero_service.dart';
 
 @Component(
-  selector: 'hero-list',
-  templateUrl: "hero_list_component.html",
-  styleUrls: ['hero_list_component.css'],
-  directives: [coreDirectives, HeroComponent]
-)
+    selector: 'hero-list',
+    templateUrl: "hero_list_component.html",
+    styleUrls: ['hero_list_component.css'],
+    directives: [coreDirectives, HeroComponent])
 class HeroListComponent implements OnInit {
   Hero selected_hero;
   List<Hero> heroes;
@@ -24,13 +23,9 @@ class HeroListComponent implements OnInit {
 
   // Set the list of heroes from the Hero services
   // void _getHeroes() => heroes = _heroService.getAll();
-  // void _getHeroes() {
-  //   _heroService.getAll().then((heroes) => this.heroes = heroes);
-  // }
-  Future<void> _getHeroes() async {
-    heroes = await _heroService.getAll();
-  }
+  Future<void> _getHeroes() async => heroes = await _heroService.getAll();
 
   // Implementation of the Component Init lifecycle hook
+  @override
   void ngOnInit() => _getHeroes();
 }

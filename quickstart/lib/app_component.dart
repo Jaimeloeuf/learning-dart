@@ -8,10 +8,13 @@ import 'package:angular_app/src/HeroListComponent/hero_list_component.dart';
     styleUrls: ['app_component.css'],
     directives: [HeroListComponent],
     providers: [ClassProvider(HeroService)])
-class AppComponent {
+class AppComponent implements OnInit {
   String name = 'Angular';
+  // var smth;
+  // AppComponent(this.smth);
 
-  // final HeroService _heroService;
-
-  // AppComponent(this._heroService);
+  @override
+  void ngOnInit() {
+    // print(this.smth);
+  }
 }
