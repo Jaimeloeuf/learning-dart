@@ -1,20 +1,20 @@
 import 'package:angular/angular.dart';
+import 'package:angular_router/angular_router.dart';
 import 'package:angular_app/src/HeroComponent/hero_service.dart';
-import 'package:angular_app/src/HeroListComponent/hero_list_component.dart';
+import 'src/routes.dart';
 
 @Component(
     selector: "my-app",
     templateUrl: "app_component.html",
     styleUrls: ['app_component.css'],
-    directives: [HeroListComponent],
-    providers: [ClassProvider(HeroService)])
-class AppComponent implements OnInit {
+    directives: [routerDirectives],
+    providers: [ClassProvider(HeroService)],
+    exports: [RoutePaths, Routes])
+class AppComponent {
   String name = 'Angular';
-  // var smth;
-  // AppComponent(this.smth);
-
-  @override
-  void ngOnInit() {
-    // print(this.smth);
-  }
 }
+
+/*  The AppComponent has a router and displays routed views.
+    For this reason, and to distinguish it from other kinds of components,
+    this component type is called a router component.
+ */
