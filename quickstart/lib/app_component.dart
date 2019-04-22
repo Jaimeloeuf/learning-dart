@@ -11,7 +11,7 @@ import 'src/routes.dart';
     providers: [ClassProvider(HeroService)],
     exports: [RoutePaths, Routes])
 class AppComponent {
-  String name = 'Angular';
+  String app_name = 'Angular';
 }
 
 /*  The AppComponent has a router and displays routed views.
